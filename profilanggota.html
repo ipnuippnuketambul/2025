@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profil Anggota Organisasi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: black;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            width: 45%;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e7e7e7;
+            border-radius: 5px;
+        }
+        .member img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .member-info {
+            font-size: 16px;
+        }
+        .member-info h3 {
+            margin: 0 0 5px;
+        }
+        .motivasi {
+            font-style: italic;
+            color: #555;
+        }
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button a {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Profil Anggota <a href="#IPNU-section" style="color:inherit; text-decoration:none;">IPNU</a> & <a href="#IPPNU-section" style="color:inherit; text-decoration:none;">IPPNU</a></h1>
+    </div>
+
+    <div class="container">
+        <div id="IPNU-section" class="section">
+            <h2>IPNU</h2>
+            <div class="member">
+                <img src="greenday.jpg" alt="Foto Member 1" width="100" height="100">
+                <div class="member-info">
+                    <h3>Nama Member 1</h3>
+                    <p>Jabatan: Ketua</p>
+                    <p>Email: member1@example.com</p>
+                    <p class="motivasi">"Motivasi hidup Member 1."</p>
+                </div>
+            </div>
+
+            <div class="member">
+                <img src="member2.jpg" alt="Foto Member 2" width="100" height="100">
+                <div class="member-info">
+                    <h3>Nama Member 2</h3>
+                    <p>Jabatan: Wakil Ketua</p>
+                    <p>Email: member2@example.com</p>
+                    <p class="motivasi">"Motivasi hidup Member 2."</p>
+                </div>
+            </div>
+
+            <!-- Anggota IPNU lainnya -->
+        </div>
+
+        <div id="IPPNU-section" class="section">
+            <h2>IPPNU</h2>
+            <div class="member">
+                <img src="member3.jpg" alt="Foto Member 3" width="100" height="100">
+                <div class="member-info">
+                    <h3>Nama Member 3</h3>
+                    <p>Jabatan: Sekretaris</p>
+                    <p>Email: member3@example.com</p>
+                    <p class="motivasi">"Motivasi hidup Member 3."</p>
+                </div>
+            </div>
+
+            <div class="member">
+                <img src="member4.jpg" alt="Foto Member 4" width="100" height="100">
+                <div class="member-info">
+                    <h3>Nama Member 4</h3>
+                    <p>Jabatan: Bendahara</p>
+                    <p>Email: member4@example.com</p>
+                    <p class="motivasi">"Motivasi hidup Member 4."</p>
+                </div>
+            </div>
+
+            <!-- Anggota IPPNU lainnya -->
+        </div>
+    </div>
+
+    <div class="back-button">
+        <a href="index.html">Kembali</a>
+    </div>
+</body>
+</html>

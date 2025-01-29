@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPNU & IPPNU Website</title>
+    <style>
+        body {
+            font-family: 'Georgia', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('ipnuippnu.jpg'); /* Tambahkan gambar sebagai latar belakang */
+            background-size: 100px; /* Menutupi seluruh halaman */
+            background-attachment: fixed; /* Gambar tetap saat halaman di-scroll */
+            background-position: center; /* Menyesuaikan posisi gambar di tengah */
+        }
+        header {
+            background-color:#333;
+            color: whitesmoke;
+            text-align: center;
+            left:0;
+            right:0;
+            top: 0;
+            height: 60px;
+            display: flex;
+            position: fixed;
+            align-items: center;
+            justify-content: center; /* Menyesuaikan posisi konten ke tengah */
+            padding: 5px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            margin: 0;
+            box-shadow: 10px 6px 5px 0px rgba(0,0,0,0.75);
+            z-index: 1000;
+            animation: slide-down 2s ease-out;
+            overflow: hidden;
+        }
+        @keyframes slide-down {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Menyesuaikan konten ke tengah */
+            width: 100%;
+        }
+        .header-center {
+            text-align: center;
+            padding: 0 1rem;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        header h2 {
+            color: white;
+            margin: 0;
+            font-size: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #444;
+            box-shadow: 0px 1px 0px 2px rgba(0,0,0,0.75);
+            top: 60px;
+            margin-top: 66px;
+            height: 100px;
+            z-index: 500;
+            padding: 8px;
+            font-size: 15px;
+            line-height: 1.5;
+            line-height: 1px;
+            margin-bottom: none;
+        }
+        nav a {
+            color: #fff;
+            padding: 1rem;
+            text-decoration: none;
+            line-height: inherit;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+        main {
+            flex: 1;
+            padding: 160px 2rem 2rem;
+            margin-top: 60px;
+            padding-top: 0;
+
+        }
+        section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fade-in 2s ease-in;
+            background-color: rgba(255, 255, 255, 0.8); /* Menambahkan latar belakang putih dengan transparansi */
+        }
+        .home-section {
+            background-color:green;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        .ipnu-ippnu-section {
+            background-color: white;
+            margin-top: 100px;
+            padding-top: 0;
+        }
+        .visi-misi-section {
+            background-color: green;
+            margin-top: 100px;
+        }
+        .lainnya-section {
+            background-color: white;
+            margin-top: 100px;
+        }
+        .box-shadow {
+            box-shadow: 1px -1px 0px 8px rgba(0,0,0,0.7);
+-webkit-box-shadow: 1px -1px 0px 8px rgba(0,0,0,0.7);
+-moz-box-shadow: 1px -1px 0px 8px rgba(0,0,0,0.7);
+        }
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slide-up 2s ease-out;
+            font-size: 10px;
+            margin-top: 30px;
+        }
+        @keyframes slide-up {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @media (max-width: 600px) {
+            header {
+                height: 1cm; /* Mengatur tinggi header menjadi 1cm */
+                flex-direction: column;
+                padding: 1rem;
+            }
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .header-center h1 {
+                font-size: 18px;
+            }
+            nav a {
+                padding: 0.5rem;
+                font-size: 8px;
+                margin-top: 30px;
+                
+            }
+            main {
+                padding: 200px 1rem 1rem;
+            }
+            section {
+                padding: 0.5rem;
+            }
+            .box-shadow {
+                margin-bottom: 1rem;
+            }
+            footer {
+                padding: 0.5rem;
+            }
+        }
+        @media (max-width: 767px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .header-center {
+                text-align: center;
+            }
+            .header-center h1 {
+                font-size: 1.5rem;
+            }
+            .header-center h2 {
+                font-size: 1rem;
+            }
+            nav {
+                top: auto;
+                position: static;
+            }
+            main {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="header-center">
+            <img src="logoipnu.png" width="20" height="20">
+            <img src="ippnu.png" width="20" height="20">
+            <h1 style="font-size: 20px;">IPNU & IPPNU DESA KETAMBUL</h1>
+        </div>
+    </div>
+</header>
+<nav>
+    <a href="https://www.instagram.com/ipnuippnuketambul_/" target="_blank">
+        <img src="logpig.png" alt="Logo Instagram" style="width:20px; height:20px; vertical-align:middle;">Instagram
+    </a>
+    <a href="sejarah.html">
+        <img src="logosejarah.png" alt="Icon Sejarah" style="width:20px; height:20px; vertical-align:middle;"> Sejarah
+    </a>
+    <a href="kegiatan.html">
+        <img src="logokegiatan.png" alt="Icon Kegiatan" style="width:20px; height:20px; vertical-align:middle;"> Kegiatan
+    </a>
+    <a href="struktur.html">
+        <img src="logostruktur.png" alt="Icon Struktur" style="width:20px; height:20px; vertical-align:middle;"> Struktur Anggota
+    </a>
+    <a href="laguwajib.html">
+        <img src="logolagu.png" alt="Icon Lagu Wajib" style="width:20px; height:20px; vertical-align:middle;"> Lagu Wajib
+    </a>
+    
+    <a href="profilanggota.html">
+        <img src="logoprofil.png" alt="Icon Profil Anggota" style="width:20px; height:20px; vertical-align:middle;"> Profil Anggota
+    </a>
+    
+</nav>
+<main>
+    <section id="home" class="box-shadow home-section">
+        <h2>Home</h2>
+        <p>Selamat datang di situs web resmi IPNU & IPPNU. Website akan terus di kembangkan. Kami berkomitmen untuk mendidik dan mengembangkan karakter pelajar Nahdlatul Ulama.</p>
+    </section>
+    <section id="ipnu-ippnu" class="box-shadow ipnu-ippnu-section">
+        <h2>IPNU & IPPNU</h2>
+        <h3>IPNU</h3>
+        <p>IPNU atau Ikatan Pelajar Nahdlatul Ulama adalah organisasi pelajar yang bertujuan untuk mengembangkan pemahaman dan keterlibatan pelajar dalam ajaran Islam Ahlussunnah Wal-jamaah serta mempersiapkan mereka sebagai pemimpin masa depan.</p>
+        <h3>IPPNU</h3>
+        <p>IPPNU atau Ikatan Pelajar Putri Nahdlatul Ulama adalah organisasi pelajar putri yang memiliki tujuan serupa dengan IPNU, yaitu untuk mengembangkan pemahaman dan keterlibatan pelajar putri dalam ajaran Islam Ahlussunnah Wal-jamaah serta mempersiapkan mereka sebagai pemimpin masa depan.</p>
+        <p>Kedua organisasi ini berperan dalam kaderisasi, pengembangan karakter, dan penguatan komunikasi antar pelajar untuk memperkokoh nilai-nilai keagamaan, kebangsaan, dan kemanusiaan.</p>
+    </section>
+    <section id="visi-misi" class="box-shadow visi-misi-section">
+        <h2>Visi & Misi</h2>
+        <h3>Visi</h3>
+        <p>Menjadi organisasi pelajar yang berkarakter, berkompeten, dan berintegritas dalam bingkai Ahlussunnah Wal-jamaah.</p>
+        <h3>Misi</h3>
+        <ul style="list-style-position: inside; text-align: left; display: inline-block;">
+            <li>Mengembangkan pemahaman keagamaan yang mendalam sesuai ajaran Ahlussunnah Wal-jamaah.</li>
+            <li>Memperkuat komunikasi dan kerjasama antar pelajar Nahdlatul Ulama.</li>
+            <li>Menyelenggarakan kegiatan-kegiatan yang membangun karakter dan kompetensi anggota.</li>
+        </ul>
+    </section>
+    <section id="lainnya" class="box-shadow lainnya-section">
+        <h2>Lainnya</h2>
+        <p>Untuk informasi lebih lanjut, hubungi kami melalui email di ipnuippnuketambul@gmail.com atau melalui media sosial kami.</p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 IPNU & IPPNU. Media informasi.</p>
+    <p>Alamat: Ds. Ketambul, Kec. Palang, Kab. Tuban, Jawa Timur</p>
+</footer>
+</body>
+</html>
